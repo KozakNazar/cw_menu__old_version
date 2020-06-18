@@ -179,16 +179,16 @@ unsigned int runSpaceOp(int x, int y, int kolommen, char spaceOp[MAX_MENU_SPACE]
     	IS_ESCAPE_SEQUENSE_PREPARE(ch0, ch1, ch2);
     	IS_KEY_DELETE_PREPARE(ch0, ch1, ch2, ch3);
     	if (IS_KEY_CTRLC(ch0)) {
-    		// no action
+    		//
     	}
     	else if (IS_KEY_ENTER(ch0)) {
 			return indey;
     	}
     	else if (IS_KEY_BACKSPACE(ch0)) {
-    		// no action
+    		//
     	}
     	else if (IS_KEY_DELETE(ch0, ch1, ch2, ch3)) {
-    		// no action
+    		//
     	}
     	else if (IS_KEY_UP(ch0, ch1, ch2)) {
     		--indey;    
