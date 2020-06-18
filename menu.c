@@ -7,10 +7,13 @@
 
 //#include "stdafx.h"
 
+#ifdef _WIN32
 // from HKEY_USERS\.DEFAULT\Keyboard Layout\Preload
 #define ENG_KEYBOARD_LAYOUT "00000409"
 #define UKR_KEYBOARD_LAYOUT "00000422"
 #define RUS_KEYBOARD_LAYOUT "00000419"
+#else // #elif __linux__
+#endif
 
 #include "stdio.h"
 //#include <stdlib.h>
@@ -388,7 +391,7 @@ int main(){
 	struct MenuElement * menu = baseMenu;
 	char spaceOp[MAX_MENU_SPACE][MAX_MENU_SPACE];
 
-#ifdef _WIN32	
+#ifdef _WIN32
 	PostMessage(
 		GetForegroundWindow(),
 		WM_INPUTLANGCHANGEREQUEST,
